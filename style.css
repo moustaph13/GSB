@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Point Bold', sans-serif;
+}
+
+
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('GSB.jpg');
+}
+
+#logo{
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+}
+
+#link{
+    text-shadow: 1px 4px 4px rgba(0,0,0,0.35);
+    margin-right: 10vh;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+nav{
+    background-color: #ffffff;
+    height: 10vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    background-clip: padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#link{
+    margin-right: 10px;
+}
+#link>a{
+    margin: 40px;
+}
+
+.listeVisiteur {
+    background-color: white;
+    width: 30vw;
+    margin-left: 50vw;
+}
+
+.listeRapport {
+    background-color: blue;
+    width: 30vw;
+    margin-left: 50vw;
+    margin-top: 5vw;
+}
+
