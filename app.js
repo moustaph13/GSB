@@ -1,13 +1,62 @@
-const url = 'http://localhost:3389/gsb/visiteur/' ;   
-const url2 = 'http://localhost:3389/gsb/rapport/'
+const url = 'http://localhost:3000/gsb/visiteur/' ;   
+const url = 'http://localhost:3000/gsb/visiteur/' ;   
+const url2 = 'http://localhost:3000/gsb/rapport/';
+const list = document.querySelector('#liste');
+
+
+// var formRapport = new FormData(); // Actuellement vide
+// formRapport.append(nom, nom.value);
+// formRapport.append(date, date.value);
 
 //Créer un visiteur
 const envoyer = document.querySelector('#envoyer');
 const inputVisiteur = document.querySelector(".chercherVisiteur");
-
-envoyer.addEventListener('click', (Event)=>{
-    console.log(inputVisiteur)
+const submit = document.querySelector("#submit");
+const nom = document.querySelector("#nom");
+const date = document.querySelector("#date");
+submit.addEventListener('click', (Event)=>{
+    Event.preventDefault();
+    fetch('http://localhost:3000/gsb/visiteur/', {
+  method: 'POST',
+  body: JSON.stringify({
+    
+    nom: nom.value,
+    dateEmbauche: date.value
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
 })
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+})
+
+// // Creer un RAPPORT
+
+// const inputRapport = document.querySelector(".CreerRapport");
+// const submit2 = document.querySelector("#submit2");
+// const idRapport = document.querySelector("#idRapport");
+// const motif = document.querySelector("#motifRapport");
+// const bian = document.querySelector("#bilanRapport");
+// const dateRapport = document.querySelector("#dateRapport");
+// submit2.addEventListener('click', (Event)=>{
+//     Event.preventDefault();
+//     fetch('http://localhost:3000/gsb/rapport/', {
+//   method: 'POST',
+//   body: JSON.stringify({ 
+    
+//     // rapportNum: id.value,
+//     date: dateRapport.value,
+//     bian: bilan.value,
+//     motif: motif.value 
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+// })
 
 const pointeurDivVisiteur = document.querySelector('.listeVisiteur');
 const pointeurDivRapport = document.querySelector('.listeRapport');
@@ -26,7 +75,7 @@ fetch(url)
         
     });
 });
-
+// afficher tout les rapports 
 fetch(url2)
 .then(response =>response.json())
 .then((datas)=>{
@@ -40,4 +89,41 @@ pointeurDivRapport.insertAdjacentHTML('beforeend',
 </ul>`);
 });
 });
+
+// modifier visiteur
+const nommodif = document.querySelector("#nommodif");
+const datemodif = document.querySelector("#datemodif");
+const submit2 = document.querySelector("#submit2");
+function updateVisiteur () {
+fetch('http://localhost:3000/gsb/visiteur/', {
+  method: 'PUT',
+  body: JSON.stringify({
+    nom: nommodif.value,
+    dateEmbauche: datemodif.value
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+};
+submit2.addEventListener ('click', (e) => {
+    e.preventDefault();
+    updateVisiteur();
+});
+
+// effacer visiteur
+function deleteVisiteur() {
+fetch('http://localhost:3000/gsb/visiteur/3', {
+  method: 'DELETE',
+});
+} 
+
+// city.addEventListener('change', (event) => {
+//   list.innerHTML='';
+//   fetchMeteo(city.value);
+// })
+
 
