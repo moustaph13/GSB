@@ -5,67 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
     <link rel="stylesheet" href="theme.css">
     <title>Document</title>
 </head>
 <header>
   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">LOGO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueuil</a>
-              <!-- </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li> -->
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Deconnection</a>
-              </li>
-            </ul>
-            
-          </div>
-        </div>
-      </nav>
-</header>
-<body>
-    <div id="blocChoix">
-
-        <div class="cardCreeVisiteur">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <div class="card-body">
-                <h5 class="card-title">Creer Visiteur</h5>
-                <p class="card-text">Vous avez ici la possibiltée de creer de nouveaux visiteurs en cliquant sur le bouton ci-dessous</p>
-                <a href="#" class="btn btn-primary">Creer Visiteurs</a>
-            </div>
-        </div>
-        
-        <div class="cardCreeRapport">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <div class="card-body">
-                <h5 class="card-title">Creer Rapport</h5>
-                <p class="card-text">Vous avez ici la possibiltée de creer de nouveaux rapports en cliquant sur le bouton ci-dessous</p>
-                <a href="#" class="btn btn-primary">Creer Visiteurs</a>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Alex</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2">
+            <a class="nav-link" href="index.php#">Accueil</a>
+            </li>        
+            <li class="nav-item mx-2">
+            <a class="nav-link" href="index.php#presentation">Présentation</a>
+            </li>        
+            <li class="nav-item mx-2">
+            <a class="nav-link" href="..\sources\pdf\CV Alexandre De Luca Alternance.pdf" download="CV_Alexandre_De_Luca_Alternance">CV</a>
+            </li>        
+            <li class="nav-item mx-2">
+            <a class="nav-link" href="index.php#skills">Compétences</a>
+            </li>        
+            <li class="nav-item mx-2">
+            <a class="nav-link" href="index.php#portfolio">Portfolio</a>
+            </li>        
+            <li class="nav-item mx-2">
+            <a class="nav-link" href="index.php#temoignages">Témoignages</a>
+            </li>        
+            <li class="nav-item mx-2">
+            <a class="nav-link" href="contact.php">Contact</a>
+            </li>
         </div>
     </div>
-        
-    </body>
-    </html>
+</nav>
+</header>
+<body>
+
+<div class="container text-center">
+  <div class="card-group">
+    <div class="card px-5 border-0 bg-transparent col-xs d-block mx-auto">
+      <div class="card-body d-block mx-auto" id="cardCreerRapport">
+        <h5 class="card-title mb-5">Creer un rapport</h5>
+        <p class="card-text">Vous avez ici la possibiltée de creer de nouveaux rapports en cliquant sur le bouton ci-dessous</p>
+        <button type="submit" id="submit2" class="btn btn-primary btn-lg px-5" name="valider" id="validrapport">Valider</button>
+      </div>
+    </div>  
+    <div class="card px-5 border-0 bg-transparent col-xs d-block mx-auto">
+      <div class="card-body d-block mx-auto" id="cardVoirRapport">
+        <h5 class="card-title mb-5">Voir les Rapports</h5>
+        <p class="card-text">Vous avez ici la possibiltée de voir les rapports en cliquant sur le bouton ci-dessous</p>
+        <button type="submit" id="submit2" class="btn btn-primary btn-lg px-5" name="valider" id="validrapport">Valider</button>
+      </div>
+    </div>  
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

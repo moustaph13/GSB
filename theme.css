@@ -1,23 +1,24 @@
 body {
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    height: 100vh;
+    background: fixed linear-gradient(45deg, #FC466B, #3F5EFB);
+    /* background: 100% rgb(131,58,180);
+    background: fixed linear-gradient(55deg, rgba(131,58,180,1) 0%, rgba(167,164,59,1) 20%, rgba(196,59,149,1) 36%, rgba(29,253,183,1) 51%, rgba(111,111,225,1) 67%, rgba(184,145,145,1) 84%, rgba(252,176,69,1) 100%); */
+    /* background: rgb(131,58,180);
+background: fixed radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(167,164,59,1) 20%, rgba(196,59,149,1) 36%, rgba(29,253,183,1) 51%, rgba(111,111,225,1) 67%, rgba(184,145,145,1) 84%, rgba(252,176,69,1) 100%);
+ */
     font-family: arial, sans-serif;
     color: rgb(15, 12, 12);
+    overflow-x: hidden;
+    background-repeat: no-repeat;
 }
 
 p {
     font-weight: bold;
 }
 
-.loginForm {
-    background-color: rgba(240, 229, 229, 0.6);
-    height: 41vh;
-    width: 25vw;
-    display: flex;
-    margin: 6vw 35vw ;
-    font-size: 18px;
+#loginForm, #rapportsList {
+    margin-top: 20vh !important;
+    background-color: white;
     font-weight: bold;
-    flex-direction: column;
     border-radius: 30px;
     opacity: 0.6;
 }
@@ -29,60 +30,37 @@ h2 {
 
 .interieurForm {
     text-align: left;
-    
-    
 }
 
 #inputUser, #inputMdp {
     width: 15vw;
-    margin-left: 5vw;
-    
-    
+    margin-left: 5vw;  
 }
 
 .insideText {
     /* margin-left: 2vw; */
     text-align: center;
     margin-bottom: 1vh;
-    
 }
 
 .entreeLogin {
-    
     margin-top: 1vh;
     text-align: center;
     margin-right: 1vw;
-    
+
 }
 
 .form-group{
     margin-top: 5vh;
 }
 
-.btn {
-    border-radius: 30px;
-}
-
 nav {
     opacity: 0.7;
   }
 
-  .cardCreeVisiteur {
-      height: 27vh;
-      width: 20vw;
-      opacity: 0.6;
-      margin-top: 20vh;
-      margin-left: 25vw;
-      background-color: white;
-      border-radius: 30px;
-  }
-
-  .cardCreeRapport {
-    height: 27vh;
-    width: 20vw;
+#cardVoirRapport,#cardCreerRapport {
+    margin: 30vh;
     opacity: 0.6;
-    margin-top: 20vh;
-    margin-left: 5vw;
     background-color: white;
     border-radius: 30px;
 }
@@ -95,11 +73,7 @@ nav {
     margin-left: 9vw;
 }
 
-#blocChoix {
-    display: flex;
-}
-
-#creeVisiteur {
+.containerVisiteur {
     border-radius: 30px;
     width: 25vw;
     height: 34vh;
@@ -114,7 +88,25 @@ nav {
     border-radius: 5px;
 }
 
-/* {
-    display: flex;
-    align-items: flex-end;
-} */
+#createVisiteur, #createRapport{
+    margin-top: 10vh;
+    padding-top: 1vh;
+    border-radius: 5vh;
+    opacity: 0.6;
+    background-color: white;
+}
+
+.navbar-brand{
+    animation-name: brand;
+    animation-duration: 2s;
+    position: relative;
+}
+
+@keyframes brand{
+    0%{left: -1000px;}
+    100%{left: 0px;}
+}
+
+#validVisiteur{
+    margin-bottom: 3vh;
+}
